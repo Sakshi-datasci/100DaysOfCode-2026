@@ -1,3 +1,9 @@
+#include <stdio.h>
+
+#define SIZE 5
+
+int stack[SIZE], top = -1;
+
 void push(int value)
 {
     if (top == SIZE - 1)
@@ -56,4 +62,19 @@ void display()
     }
 
     printf("\n");
+}
+
+int main()
+{
+    push(101);
+    push(102);
+    push(103);
+    push(104);
+
+    swapTop();
+
+    pop();
+    display();
+
+    return 0;
 }
